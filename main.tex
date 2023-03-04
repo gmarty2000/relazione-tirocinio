@@ -1,12 +1,31 @@
-\documentclass{article}
+\documentclass{report}
+\usepackage[a4paper, portrait, margin={1.5cm, 2cm}]{geometry}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
-\usepackage{datetime}
 
-\newdate{date}{30}{06}{2023}
-\date{\displaydate{date}}
-\author{Giuseppe Martini}
-\title{Relazione tirocinio}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{subfiles} % Good-practise: caricarlo per ultimo nel preambolo
+
 \begin{document}
-    \maketitle
+    \subfile{extra/00_titlepage.tex} % Pagina di introduzione
+    \pagenumbering{Roman}
+    \tableofcontents
+    \newpage
+    \pagenumbering{arabic}
+
+    \chapter{Introduzione}
+    \blindtext
+
+    \chapter{Preparazione}
+    \blindtext
+
+    \chapter{Sviluppo}
+    \blindtext
+
+    \chapter{Conclusione}
+    \blindtext
+
 \end{document}
